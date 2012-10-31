@@ -20,10 +20,11 @@ post '/gdriveFiles' do
 	content_type :json;
 	data = JSON.parse request.body.read
 	
-	#$log.debug 'folder requested: '+data['folderName'];
+	$log.debug 'folder requested: '+data['folderName'];
 	
-	session = GoogleDrive.login("GOOGLE_LOGIN", "GOOGLE_PASSWORD");
-	@folderHierarchy = session.collection_by_url('FOLDER_URL');
+	session = GoogleDrive.login("intermedia.miracle@gmail.com", "vaffel123");
+	#this queries the folder called 'heatpump'
+	@folderHierarchy = session.collection_by_url('https://docs.google.com/feeds/default/private/full/folder%3A0B0ISH1Jh_26pSE1tdjE2RWlhM0E?v=3');
 	
 	#$log.debug @folderHierarchy.files;
 	

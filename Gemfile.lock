@@ -45,8 +45,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  foreman
-  google_drive
-  json
-  sinatra
-  thin
+  foreman (= 0.62.0)
+  google_drive (= 0.3.5)
+  json (= 1.7.7)
+  sinatra (= 1.4.2)
+  thin (= 1.5.1)

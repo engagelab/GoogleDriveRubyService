@@ -12,7 +12,7 @@ post '/gdriveFiles' do
 	data = JSON.parse request.body.read
 	p data['folderName']
 	
-	session = GoogleDrive.login("intermedia.miracle@gmail.com", "labrat123");
+	session = GoogleDrive.login(ENV['GOOGLE_LGIN'], ENV['GOOGLE_PASS']);
 	@folderHierarchy = session.collection_by_url('https://docs.google.com/feeds/default/private/full/folder%3A0B0ISH1Jh_26pSE1tdjE2RWlhM0E?v=3');
 	
 	fileURLs = [];
